@@ -1,0 +1,6 @@
+{
+  "priority": 1,
+  "hidden": true,
+  "scripts": [ "~/myjs/blahblah.js" ],
+  "components": [ "sf-page-selector", "sf-expander", "sf-loading", "sf-style-dropdown", "sf-list-selector", "sf-library-selector" ]
+}
