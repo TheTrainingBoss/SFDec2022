@@ -4,6 +4,8 @@
 </auto-generated>
 ------------------------------------------------------------------------------ */
 
+using Progress.Sitefinity.Renderer.Designers.Attributes;
+using Progress.Sitefinity.Renderer.Entities.Content;
 using SFDec2022.Mvc.Models;
 using System;
 using System.ComponentModel;
@@ -33,7 +35,7 @@ namespace SFDec2022.Mvc.Controllers
 
         public ActionResult Kyle()
         {
-            return View();
+            return View("Kyle");
         }
 
         protected override void HandleUnknownAction(string actionName)
@@ -47,6 +49,18 @@ namespace SFDec2022.Mvc.Controllers
         [Browsable(false)]
         public int Number { get; set; }
         public DateTime MyDate { get; set; }
+
+        [Content(Type=KnownContentTypes.Images)]
+        public MixedContentContext Images { get; set; }
+
+        [Content(Type = KnownContentTypes.Pages)]
+        public MixedContentContext Page { get; set; }
+
+        [Content(Type = KnownContentTypes.Tags)]
+        public MixedContentContext Tags { get; set; }
+        
+        [Content(Type = KnownContentTypes.News)]
+        public MixedContentContext News { get; set; }
 
     }
 }
